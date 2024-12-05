@@ -1,0 +1,27 @@
+{
+  "name": "github-actions-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest src/app.test.js",
+    "start": "node src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AmitRoy01/github-actions-node.git"
+  },
+  "author": "amit_roy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AmitRoy01/github-actions-node/issues"
+  },
+  "homepage": "https://github.com/AmitRoy01/github-actions-node#readme",
+  "dependencies": {
+    "express": "^4.21.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  }
+}

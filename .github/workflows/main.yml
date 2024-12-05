@@ -1,0 +1,34 @@
+name: NodeJS Github Action
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3  #checkout the repository
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
+
+    #   - name: Deploy to Heroku
+    #     if: success()
+    #     env:
+    #       HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+    #     run: |
+    #       echo "Deploying to Heroku..."
+    #       npm install -g heroku
+    #       heroku git:remote -a my-simple-devops-app
+    #       git push heroku main --force
